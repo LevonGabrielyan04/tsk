@@ -49,6 +49,20 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | Examples:	my-controller/index	-> my_controller/index
 |		my-controller/my-method	-> my_controller/my_method
 */
-$route['default_controller'] = 'welcome';
+$route['default_controller'] = 'welcome';//$route['default_controller'] = 'Frontend/PupilsController/index'
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
+
+$route['pupils'] = 'Frontend/PupilsController/index/1';
+$route['pupils/(:num)'] = 'Frontend/PupilsController/index/$1';
+$route['pupils/add'] = 'Frontend/PupilsController/create';
+$route['pupils/store'] = 'Frontend/PupilsController/store';
+$route['pupils/edit/(:any)'] = 'Frontend/PupilsController/edit/$1';
+$route['pupils/update/(:any)'] = 'Frontend/PupilsController/update/$1';
+$route['pupils/delete/(:any)']= 'Frontend/PupilsController/delete/$1';
+$route['pupils/search'] = 'Frontend/PupilsController/search';
+$route['pupils/view/(:any)'] = 'Frontend/PupilsController/view/$1';
+$route['pupils/editmarks/(:any)'] = 'Frontend/PupilsController/editMarks/$1';
+$route['pupils/createMarks/(:any)/(:any)'] = 'Frontend/PupilsController/createMarks/$1/$2';
+$route['pupils/store_marks/(:any)/(:any)'] = 'Frontend/PupilsController/store_marks/$1/$2';
+$route['pupils/updateMarks/(:any)'] = 'Frontend/PupilsController/updateMarks/$1';
